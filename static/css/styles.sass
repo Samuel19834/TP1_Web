@@ -1,7 +1,42 @@
-// Les fichiers sAss n'ont pas de point-virgule ni d'accolade
-// Vous pouvez utiliser des .scss OU .sass à votre choix
-
 @import "bootstrap"
 
+$lightShade: #FBFAF9
+$lightAccent: #4777DD
+$mainColor: #3A99E9
+$darkAccent: #743561
+$darkShades: #1A2763
+
 body
-    background-color: #FBFAF9
+    background-color: $lightShade
+
+header
+    @extend .p-0
+    background-color: $mainColor
+    color: $lightShade
+
+    h1
+        @extend .display-5
+        color: $lightShade
+
+    p
+        @extend .lead
+
+.nav-item a
+        color: $lightShade
+        text-decoration: none
+        padding: 10px
+
+        &:hover
+            background-color: #57a7eb
+
+header > *, main, footer > *
+    @extend .container
+
+footer
+  background-color: $darkShades
+  color: $lightShade
+
+img
+    @extend .img-thumbnail, .d-block
+    max-width: 150px
+    height: auto
