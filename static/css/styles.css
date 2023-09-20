@@ -634,7 +634,7 @@ progress {
   color: #6c757d;
 }
 
-.container, header > *, main, footer > *,
+.container, header > *, main > *, footer > *,
 .container-fluid,
 .container-xxl,
 .container-xl,
@@ -651,27 +651,27 @@ progress {
 }
 
 @media (min-width: 576px) {
-  .container-sm, .container, header > *, main, footer > * {
+  .container-sm, .container, header > *, main > *, footer > * {
     max-width: 540px;
   }
 }
 @media (min-width: 768px) {
-  .container-md, .container-sm, .container, header > *, main, footer > * {
+  .container-md, .container-sm, .container, header > *, main > *, footer > * {
     max-width: 720px;
   }
 }
 @media (min-width: 992px) {
-  .container-lg, .container-md, .container-sm, .container, header > *, main, footer > * {
+  .container-lg, .container-md, .container-sm, .container, header > *, main > *, footer > * {
     max-width: 960px;
   }
 }
 @media (min-width: 1200px) {
-  .container-xl, .container-lg, .container-md, .container-sm, .container, header > *, main, footer > * {
+  .container-xl, .container-lg, .container-md, .container-sm, .container, header > *, main > *, footer > * {
     max-width: 1140px;
   }
 }
 @media (min-width: 1400px) {
-  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container, header > *, main, footer > * {
+  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container, header > *, main > *, footer > * {
     max-width: 1320px;
   }
 }
@@ -3948,7 +3948,7 @@ textarea.form-control-lg {
   padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
 }
 
-.navbar > .container, header.navbar > *, .navbar > main, footer.navbar > *,
+.navbar > .container, header.navbar > *, main.navbar > *, footer.navbar > *,
 .navbar > .container-fluid,
 .navbar > .container-sm,
 .navbar > .container-md,
@@ -8065,7 +8065,7 @@ textarea.form-control-lg {
   margin-left: auto !important;
 }
 
-.p-0, header {
+.p-0, .card, header {
   padding: 0 !important;
 }
 
@@ -11189,12 +11189,12 @@ textarea.form-control-lg {
 }
 
 body {
-  background-color: #FBFAF9;
+  background-color: #1A2763;
+  color: #FBFAF9;
 }
 
 header {
   background-color: #3A99E9;
-  color: #FBFAF9;
 }
 header h1 {
   color: #FBFAF9;
@@ -11208,14 +11208,18 @@ header h1 {
   background-color: #57a7eb;
 }
 
-footer {
-  background-color: #1A2763;
-  color: #FBFAF9;
+main {
+  padding: 25px 0;
+  background-color: #FBFAF9;
+  color: black;
 }
 
-img {
-  max-width: 150px;
-  height: auto;
+.card {
+  border: none;
+  background-color: #FBFAF9;
+}
+.card .card-img-top {
+  border: none;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -7,12 +7,12 @@ $darkAccent: #743561
 $darkShades: #1A2763
 
 body
-    background-color: $lightShade
+    background-color: $darkShades
+    color: $lightShade
 
 header
     @extend .p-0
     background-color: $mainColor
-    color: $lightShade
 
     h1
         @extend .display-5
@@ -29,14 +29,21 @@ header
         &:hover
             background-color: #57a7eb
 
-header > *, main, footer > *
+header > *, main > *, footer > *
     @extend .container
 
-footer
-  background-color: $darkShades
-  color: $lightShade
+main
+    padding: 25px 0
+    background-color: $lightShade
+    color: black
+
+.card
+    @extend .p-0
+    border: none
+    background-color: $lightShade
+
+    .card-img-top
+        border: none
 
 img
     @extend .img-thumbnail, .d-block
-    max-width: 150px
-    height: auto

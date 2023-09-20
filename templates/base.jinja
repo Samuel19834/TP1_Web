@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>{{titre}} | Nom du Site</title>
+    <title>{{titre}} | Troqueur</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="/static/css/styles.css" />
 </head>
@@ -11,10 +11,10 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light">
-            {% if pagePrincipale %}
-                <h1 class="h1 navbar-brand mb-0">Titre</h1>
+            {% if titre == "Accueil" %}
+                <h1 class="h1 navbar-brand mb-0">Troqueur</h1>
             {% else %}
-                <a class="h1 navbar-brand mb-0" href="#">Titre</a>
+                <a class="h1 navbar-brand mb-0" href="base.jinja">Troqueur</a>
             {% endif %}
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="btn" href="#">Ajout d'un objet</a></li>
@@ -23,9 +23,16 @@
         </nav>
     </header>
     <main>
-
+        <div class="p-0">
+            <h2>Objets récents</h2>
+            <ul class="row p-0">
+                {% for objet in objets %}
+                    {% block objet %}  {% endblock %}
+                {% endfor %}
+            </ul>
+        </div>
     </main>
-    <footer>
+    <footer class="p-0">
             <div class="d-flex justify-content-between">
                 <p>Samuel Lavoie</p>
                 <p>copyright 2023</p>
